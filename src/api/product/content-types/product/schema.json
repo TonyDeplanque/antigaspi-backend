@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "expiryDate": {
+      "type": "date"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "food": {
+      "displayName": "food",
+      "type": "component",
+      "repeatable": false,
+      "component": "fridge.food"
+    }
+  }
+}

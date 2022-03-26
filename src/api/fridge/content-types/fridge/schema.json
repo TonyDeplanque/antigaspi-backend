@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fridges",
+  "info": {
+    "singularName": "fridge",
+    "pluralName": "fridges",
+    "displayName": "fridge",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "fridge"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}

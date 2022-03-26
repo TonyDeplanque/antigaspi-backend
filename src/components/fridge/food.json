@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_fridge_foods",
+  "info": {
+    "displayName": "food",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "barcode": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    }
+  }
+}
