@@ -7,7 +7,23 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register({ strapi }) {
+    strapi.contentType('plugin::users-permissions.user').lifecycles = {
+      async afterCreate(event) {
+        const {result} = event;
+        try {
+          await strapi.entityService.create('api::fridge.fridge', {
+            data: {
+              users: [result.id]
+            }
+          })
+        } catch (e) {
+          console.error(e)
+          await strapi.entityService.delete('plugin::users-permissions.user', result.id)
+        }
+      },
+    }
+  },
 
   /**
    * An asynchronous bootstrap function that runs before
