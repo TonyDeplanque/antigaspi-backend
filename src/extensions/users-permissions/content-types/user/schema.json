@@ -68,6 +68,12 @@
       "relation": "manyToOne",
       "target": "api::fridge.fridge",
       "inversedBy": "users"
+    },
+    "messagings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::messaging.messaging",
+      "mappedBy": "user"
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messagings",
+  "info": {
+    "singularName": "messaging",
+    "pluralName": "messagings",
+    "displayName": "Messaging",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "messagings"
+    }
+  }
+}
